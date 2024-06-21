@@ -1,9 +1,5 @@
-console.log ("          PEDRA - PAPEL - TESOURA");
-console.log ("-----------------------------------------");
-console.log ("                 PLACAR")
-console.log  ("Usuario: " );
-console.log ("Computador: ");
-console.log ("-----------------------------------------");
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice () {
     let randomN = Math.floor(Math.random() * 3);
@@ -27,7 +23,7 @@ function getHumanChoice (){
     inputHuman = inputHuman.toLowerCase();
 
     if ((inputHuman != "pedra") && (inputHuman != "papel") && (inputHuman != "tesoura")){ 
-        console.log (`A opção "${inputHuman}" é inválida!`);
+        window.alert (`A opção "${inputHuman}" é inválida!`);
         inputHuman = getHumanChoice();
     }
     return (inputHuman);
@@ -36,15 +32,30 @@ function getHumanChoice (){
 function playRound (humanChoice, computerChoice){
 
     if(humanChoice === computerChoice){
-        console.log("Empate!")
+        window.alert("Empate!")
+    } else if ((humanChoice === "pedra") && (computerChoice === "tesoura")){
+        humanScore++;
+        window.alert ("Você venceu!");
+    } else if ((humanChoice === "papel") && (computerChoice === "pedra")){
+        humanScore++;
+        window.alert ("Você venceu!");
+    } else if((humanChoice === "tesoura") && (computerChoice === "papel")){
+        humanScore++;
+        window.alert ("Você venceu!");
+    } else {
+        computerScore++;
+        window.alert ("Você perdeu...")
     }
 }
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
+function playGame () {
+    for (let i = 0; i < 3; i++ ){
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        window.alert (`Escolha do usuario: ${humanChoice} \nEscolha do computador: ${computerChoice}`);
+        playRound(humanChoice, computerChoice); 
+    }
+    window.alert (`Pontuação final\nUsuário: ${humanScore}\nComputador: ${computerScore} `);
+}
 
-console.log (`Escolha do usuario: ${humanChoice}`);
-console.log (`Escolha do computador: ${computerChoice}`);
-
-playRound(humanChoice, computerChoice);
-
+playGame();
