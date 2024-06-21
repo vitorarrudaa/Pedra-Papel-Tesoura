@@ -49,7 +49,11 @@ function playRound (humanChoice, computerChoice){
 }
 
 function playGame () {
-    for (let i = 0; i < 3; i++ ){
+    window.alert ("Bem vindo ao jogo!")
+    let round = parseInt(prompt ("Quantidade de rodadas: "));
+    window.alert ("A seguir digite a opção escolhida: pedra, papel ou tesoura.")
+
+    for (let i = 0; i < round; i++ ){
         let humanChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
         window.alert (`Escolha do usuario: ${humanChoice} \nEscolha do computador: ${computerChoice}`);
