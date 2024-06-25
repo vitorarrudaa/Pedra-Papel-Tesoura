@@ -66,8 +66,11 @@ body {
     justify-content: center;
 }
 
-.botao {
+.botao{
     min-width: 90px;
     border-radius: 5px;
     padding: 5px;
+    cursor: pointer;
 }
+
+button:focus{background-color:rgb(171, 193, 212);}
