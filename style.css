@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.cont_col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont_lin {
+    display: flex;
+    flex-direction: row;
+}
+
+.placar, .jogo {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.titilo, .bloco_jogo {
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+.titulo {
+    padding: 10px;
+}
+
+.bloco_jogo {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bloco_jogo, body {
+    gap: 50px;
+}
+
+.placar {
+    flex-basis: 200px;
+    padding: 10px 0px;
+}
+
+.jogo, .opcoes {
+    gap: 5px;
+}
+
+.jogo {
+    align-items: center;
+    justify-content: space-evenly;
+    flex-basis: 300px;
+    min-height: 150px;
+    padding: 10px;
+}
+
+.opcoes {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao {
+    min-width: 90px;
+    border-radius: 5px;
+    padding: 5px;
+}

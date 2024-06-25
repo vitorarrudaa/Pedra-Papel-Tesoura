@@ -1,4 +1,4 @@
-let humanScore = 0;
+/*let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice () {
@@ -62,4 +62,4 @@ function playGame () {
     window.alert (`Pontuação final\nUsuário: ${humanScore}\nComputador: ${computerScore} `);
 }
 
-playGame();
+playGame();*/

@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo do tigrinho</title>
+    <title>Joquempô</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <script src="script.js"></script>
+<body class="cont_col">
+    <h1 class="titulo">JOQUEMPÔ</h1>
+    <section class="cont_lin bloco_jogo">
+        <div class="placar cont_col">
+            <h2>Jogador</h2>
+            <span id="placar_jog">2</span>
+        </div>
+        <div class="jogo cont_col">
+            <h2>Escolha sua opção</h2>
+            <div class="opcoes cont_lin">
+                <button class="botao"> PEDRA</button>
+                <button class="botao"> PAPEL</button>
+                <button class="botao"> TESOURA</button>
+            </div>
+                <button class="botao">Jogar</button>
+        </div>
+        <div class="placar cont_col">
+            <h2>Computador</h2>
+            <span id="placar_comp">1</span>
+        </div>
+    </section>
 </body>
 </html>
