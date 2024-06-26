@@ -6,8 +6,6 @@ function zerar (){
     humanScore = "";
     computerScore = "";
     inputHuman = "";
-    placar_jog.textContent = humanScore;
-    placar_comp.textContent = computerScore;
 }
 
 function getComputerChoice () {
@@ -32,8 +30,9 @@ function getHumanChoice (escolha){
 }
 
 function playRound (humanChoice, computerChoice){
+    if (humanChoice === computerChoice){
 
-    if ((humanChoice === "pedra") && (computerChoice === "tesoura")){
+    }else if ((humanChoice === "pedra") && (computerChoice === "tesoura")){
         humanScore++;
     } else if ((humanChoice === "papel") && (computerChoice === "pedra")){
         humanScore++;
